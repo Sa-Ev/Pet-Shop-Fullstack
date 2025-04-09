@@ -1,0 +1,8 @@
+# Vite (клиент)
+client/dist/
+client/node_modules/
+
+# Node.js (сервер)
+server/node_modules/
+.env
+.DS_Store

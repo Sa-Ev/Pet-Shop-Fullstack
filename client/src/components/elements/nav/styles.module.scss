@@ -1,0 +1,63 @@
+.navContainer {
+  position: relative;
+  max-width: 100%;
+
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  .link {
+    padding: 2px;
+  }
+  .link:hover {
+    border: 0.3px solid, rgb(100, 100, 214);
+    border-radius: 4px;
+  }
+  .hamburger {
+    display: none;
+    max-width: max-content;
+    cursor: pointer;
+    gap: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .hamburgerLine {
+      width: 50px;
+      height: 3px;
+      background-color: #333;
+    }
+  }
+
+  @media (max-width: 688px) {
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link {
+      font-size: medium;
+    }
+
+    .menu {
+      display: none;
+      padding: 15px;
+      flex-direction: column;
+      position: absolute;
+      top: -15px;
+      left: -40px;
+      width: 130px;
+      background-color: #ced9df;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      color: blue;
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
